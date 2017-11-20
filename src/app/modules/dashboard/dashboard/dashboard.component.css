@@ -1,0 +1,57 @@
+.container{
+    height: auto;
+    width :auto;
+    margin: 10%;
+}
+section{
+    margin: 0 auto;
+    display: flex;
+    margin-top: 10%;
+}
+.column{
+    margin: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+div.js-image{
+    height:100px;
+    width :100px;
+    background-image : url('./../../../../../src/assets/images/js.png');
+    background-color: #cccccc;
+    background-size: 100% 100%;
+}
+div.php-image{
+    height:100px;
+    width :100px;
+    background-image : url('./../../../../../src/assets/images/php.png');
+    background-color: #cccccc;
+    background-size: 100% 100%;
+}
+div.cplus-image{
+    height:100px;
+    width :100px;
+    background-image : url('./../../../../../src/assets/images/c++.png');
+    background-color: #cccccc;
+    background-size: 100% 100%;
+}
+div.go-image{
+    height:100px;
+    width :100px;
+    background-image : url('./../../../../../src/assets/images/php.png');
+    background-color: #cccccc;
+    background-size: 100% 100%;
+}
+div.scala-image{
+    height:100px;
+    width :100px;
+    background-image : url('./../../../../../src/assets/images/scala.png');
+    background-color: #cccccc;
+    background-size: 100% 100%;
+}
+div.java-image{
+    height:100px;
+    width :100px;
+    background-image : url('./../../../../../src/assets/images/java.png');
+    background-color: #cccccc;
+    background-size: 100% 100%;
+}

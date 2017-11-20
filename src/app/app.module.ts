@@ -1,16 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpModule} from '@angular/http';
+import { Ng2TableModule } from 'ng2-table/ng2-table';
 
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
+import {DashboardModule} from './modules/dashboard/dashboard.module';
+
+
+const APP_ROUTES: Route[] = [
+  {path: '' , redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: 'dashboard', loadChildren: './modules/dashboard/dashboard.module#DashboardModule'},
+];
+const APP_ROUTE_CONF: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES, {useHash: true});
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule, RouterModule,
+    HttpModule,
+    APP_ROUTE_CONF,
+    DashboardModule,
+    Ng2TableModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
