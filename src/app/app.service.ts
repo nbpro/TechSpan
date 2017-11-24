@@ -1,33 +1,32 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {Observable} from 'rxjs/Rx';
 
 
-export interface AppConfig{
-  user:{
-      name:string;
-      locale?:{
-          tz:string,
-          language:string
+export interface UserConfig {
+  user: {
+      name: string;
+      locale?: {
+          tz: string,
+          language: string
       }
-  }
+    };
 }
 
 @Injectable()
 export class AppService {
-  
-  private _config:any = {
-    user:{
-      name:"Neeraj"
+   private _config: any = {
+    user: {
+      name: 'Neeraj'
     }
   };
 
   constructor() { }
 
-  getState():Observable<any>{
+  getState(): Observable<any> {
     return Observable.of(this.buildState());
   }
 
-  private buildState():any{
+  private buildState(): any {
     return this._config;
   }
 

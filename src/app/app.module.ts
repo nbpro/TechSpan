@@ -5,6 +5,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpModule} from '@angular/http';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
 
+
+
+import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import {DashboardModule} from './modules/dashboard/dashboard.module';
@@ -26,9 +32,10 @@ const APP_ROUTE_CONF: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES, {us
     HttpModule,
     APP_ROUTE_CONF,
     DashboardModule,
-    Ng2TableModule
+    Ng2TableModule,
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+

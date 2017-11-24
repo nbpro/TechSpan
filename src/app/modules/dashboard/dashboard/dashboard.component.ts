@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http,Response } from '@angular/http';
+import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,27 +22,7 @@ export class DashboardComponent implements OnInit {
     console.log('Inside dashboard constructor');
   }
 
-  ngOnInit(){
-    this.getTopTenRepos();
-    this.getAllRepoData();
-  }
-
-  getData(){
-    return this.http.get(this.apiUrl).map((res:Response) => res.json())
-  }
-
-  getTopTenRepos(){
-    this.getData().subscribe(data => {
-      this.topTenData = data;
-    })
-  }
-
-  getAllRepoData():void{
-    this.http.get(this.gitHubDataUrl).map((res:Response ) => res.json()).subscribe(data =>{
-      console.table(data);
-      this.allDataRepo = data;
-    });
-  }
+  ngOnInit(){}
 
   clicked(evt) :void{
     evt.preventDefault();

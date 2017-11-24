@@ -16,14 +16,14 @@ import {
 } from '@angular/material';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
 import {MatTableModule} from '@angular/material/table';
-import { LoginComponent } from './dashboard/langdashboard/login/login.component';
+import { CdkTableModule } from '@angular/cdk/table';
+import { LangDashBoardService } from './dashboard/langdashboard/langdashboard.service';
 
 
 // in dashboard module
 const dashboardRoutes: Routes = [
   { path: '',  component: DashboardComponent },
-  // { path: 'dashboard/:id', component : LangdashboardComponent},
-  { path: 'dashboard/login', component : LoginComponent}
+  { path: 'dashboard/:id', component : LangdashboardComponent},
 ];
 
 const dashboardRouting = RouterModule.forChild(dashboardRoutes);
@@ -31,17 +31,12 @@ const dashboardRouting = RouterModule.forChild(dashboardRoutes);
 @NgModule({
   imports: [
     CommonModule,
-    // RouterModule,
-    // dashboardRouting,
-    // MatIconModule,
-    // MatButtonModule,
-    // MatListModule,
-    // MatMenuModule,
-    // MatSelectModule,
-    // MatInputModule,
-    // Ng2TableModule,
-    // MatTableModule,
+    RouterModule,
+    dashboardRouting,
+    MatTableModule,
+    CdkTableModule,
   ],
-  declarations: [DashboardComponent, LangdashboardComponent, LoginComponent],
+  providers: [LangDashBoardService],
+  declarations: [DashboardComponent, LangdashboardComponent],
 })
 export class DashboardModule { }
