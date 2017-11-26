@@ -19,7 +19,7 @@ export class LangdashboardComponent implements OnInit {
   displayedColumns: any = [];
   constructor(
     private route: ActivatedRoute,
-    private  service : LangDashBoardService
+    private  service: LangDashBoardService
   ) { }
 
   ngOnInit() {
@@ -28,12 +28,10 @@ export class LangdashboardComponent implements OnInit {
   }
 
   getAllRepos(lang: string) {
-    this.displayedColumns = ['full_name', 'description'];
     this.dataSource = this.service.getAllReposFromGithub(lang);
   }
   getRepoDetails(event){
-    console.log(event);
-    debugger;
+
   }
 }
 export interface Element {

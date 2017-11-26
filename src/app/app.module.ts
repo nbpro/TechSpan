@@ -3,7 +3,6 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpModule} from '@angular/http';
-import { Ng2TableModule } from 'ng2-table/ng2-table';
 
 
 
@@ -32,7 +31,6 @@ const APP_ROUTE_CONF: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES, {us
     HttpModule,
     APP_ROUTE_CONF,
     DashboardModule,
-    Ng2TableModule,
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

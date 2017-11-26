@@ -8,7 +8,7 @@ export class LangDashBoardService {
     value:string;
     baseUrl:string = `https://api.github.com/search/repositories`;
     queryUrl:string = `?q=`;
-    constructor(private http:Http){
+    constructor(private http: Http){
 
     }
     getAllReposFromGithub(lang:string){
@@ -19,4 +19,8 @@ export class LangDashBoardService {
     extractData(res){
         return res.json();
     }
-} 
+
+    getAllUser(lang:string,page:number =0){
+        const url = `${this.baseUrl}${this.queryUrl}`
+    }
+}

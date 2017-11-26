@@ -21,12 +21,15 @@
   overflow: auto;
   max-height: 500px;
 }
+body{
+  counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 30%;
   table-layout: fixed;
 }
 table caption {
@@ -41,12 +44,31 @@ table tr {
 table th,
 table td {
   padding: .625em;
-  text-align: center;
+  text-align: left;
 }
 table th {
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
+}
+table td .avatar{
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+.image-name{
+  width : 80%;
+  padding-left:5%;
+  text-overflow: ellipsis;
+}
+.star-count{
+  width :20%;
+  text-overflow: ellipsis;
+}
+.rank{
+  width : 15%;
+  text-align: left;
 }
 @media screen and (max-width: 600px) {
   table {

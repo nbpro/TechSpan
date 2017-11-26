@@ -14,7 +14,6 @@ import {
   MatInputModule,
   MatDialogModule
 } from '@angular/material';
-import { Ng2TableModule } from 'ng2-table/ng2-table';
 import {MatTableModule} from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
 import { LangDashBoardService } from './dashboard/langdashboard/langdashboard.service';
