@@ -17,12 +17,14 @@ import {
 import {MatTableModule} from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
 import { LangDashBoardService } from './dashboard/langdashboard/langdashboard.service';
+import { RepodetailsComponent } from './dashboard/repodetails/repodetails.component';
 
 
 // in dashboard module
 const dashboardRoutes: Routes = [
   { path: '',  component: DashboardComponent },
   { path: 'dashboard/:id', component : LangdashboardComponent},
+  { path: 'dashboard/:username', component : RepodetailsComponent},
 ];
 
 const dashboardRouting = RouterModule.forChild(dashboardRoutes);
