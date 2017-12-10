@@ -36,7 +36,7 @@ export class LangdashboardComponent implements OnInit {
     event.preventDefault();
     let currentTarget = event && event['currentTarget'];
     const value = currentTarget && currentTarget.innerText;
-    this.router.navigate([`dashboard/${value}`]);
+    this.router.navigate([`dashboard/${this.language}/${value}`]);
   }
 }
 export interface Element {

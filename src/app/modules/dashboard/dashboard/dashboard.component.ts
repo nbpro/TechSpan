@@ -24,7 +24,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(){}
 
-  clicked(evt) :void{
+  clicked(id,evt) :void{
+    console.log(id,evt)
     evt.preventDefault();
     let currentTarget = evt && evt['currentTarget'];
     const value = currentTarget && currentTarget.getAttribute('data-language');

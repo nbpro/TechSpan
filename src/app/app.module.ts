@@ -27,7 +27,8 @@ const APP_ROUTE_CONF: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES, {us
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule, RouterModule,
+    BrowserAnimationsModule, 
+    RouterModule,
     HttpModule,
     APP_ROUTE_CONF,
     DashboardModule,

@@ -1,13 +1,20 @@
-import {OnInit} from "@angular/core/src/metadata/lifecycle_hooks";
-import { ActivatedRoute } from "@angular/router/src/router_state";
+import { Component,OnInit} from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+@Component({
+  selector: 'repo-dashboard',
+  template: `<div><ng-template #container>Thi sis my tempaklte </ng-template></div>`,
+})
 export class RepodetailsComponent  implements OnInit{
 
 
   constructor(
     private route:ActivatedRoute,
-  ) {}
+  ) {
+    console.log("inside repo details constructor");
+  }
 
   ngOnInit(): void {
-    let username = this.route.snapshot.params['username']
+    let username = this.route.snapshot.params['username'];
+    console.log(username);
   }
 }
